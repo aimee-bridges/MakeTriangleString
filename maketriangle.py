@@ -1,17 +1,14 @@
-
-#Function to build triangle with 5 rows of *
-
-def makeTriangle():
-    #empty string to store triangle
+#function that builds a triangle with anumber of rows
+def makeTriangle(num_rows):
+     # Start with an empty string to store the triangle
     triangle = "" 
 
-    #Loop from 1 to 5
-    for i in range(1,6):
-        #add i stars and newline
+    # Loop from 1 up to the number of rows requested
+    for i in range(1, num_rows + 1):
+         # Add i stars and a newline
         triangle += "*" * i + "\n"
+    # Return the completed triangle string
+    return triangle  
 
-    #return complete triangle to string
-    return triangle
-
-#print triangle
-print(makeTriangle())
+# Example: print a triangle with 5 rows
+print(makeTriangle(5))
